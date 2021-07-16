@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client_app.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Справочники">
+            <items>
+              <MenuItem fx:id="mnItemCategories" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Категория товара" />
+                  <MenuItem fx:id="mnItemAddProduct" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Добавить товар" />
+                  <MenuItem fx:id="mnItemEditProduct" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Редактировать товар" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tblViewProducts" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colmnId" prefWidth="67.0" resizable="false" text="№" />
+          <TableColumn fx:id="colmnProductName" minWidth="0.0" prefWidth="182.0" text="Название товара" />
+            <TableColumn fx:id="colmnCategoryName" prefWidth="190.0" resizable="false" text="Категория" />
+            <TableColumn fx:id="colmnPrice" minWidth="0.79998779296875" prefWidth="199.0" resizable="false" text="Цена" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>
